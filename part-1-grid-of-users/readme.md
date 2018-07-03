@@ -6,7 +6,7 @@ Made with [ReactJS](https://reactjs.org/). This project was bootstrapped with [C
 Prerequsites:
 
 * [Node and npm](https://www.npmjs.com/get-npm)
-* [yarn](https://yarnpkg.com/lang/en/docs/install/)
+* (optional) [yarn](https://yarnpkg.com/lang/en/docs/install/)
 
 Install packages:
 
