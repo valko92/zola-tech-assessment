@@ -1,0 +1,38 @@
+.grid-item {
+    border:2px solid black;
+    width: calc(30% - 10px);
+    max-width: calc(30% - 10px);
+    height: auto;
+    flex: 1 1 calc(30% - 10px);
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item .name {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.grid-item .age {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.grid-item .cat {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.grid-item.priority-1 { background-color: orange; }
+.grid-item.priority-2 { background-color: green; }
+.grid-item.priority-3 { background-color: blue; }
+.grid-item.priority-4 { background-color: purple; }

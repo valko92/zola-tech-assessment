@@ -1,0 +1,10 @@
+.grid {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
