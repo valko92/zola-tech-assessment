@@ -1,0 +1,32 @@
+{
+  "name": "part-2-wedding-website-design",
+  "version": "1.0.0",
+  "description": "Part 2 of Zola tech assessment.",
+  "main": "index.js",
+  "repository": "git@github.com:valko92/zola-tech-assessment.git",
+  "author": "Valeriya K <valko92@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^8.6.4",
+    "cpx": "^1.5.0",
+    "make-dir-cli": "^1.0.0",
+    "node-sass": "^4.9.0",
+    "postcss-cli": "^5.0.1",
+    "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "~~~~~STYLES~~~~~": "~~~~~~~~COMPILE SCSS -> CSS, AUTOPREFIX~~~~~~~~~~~~~~",
+    "sass": "node-sass --output-style compressed scss/main.scss css/main.css",
+    "autoprefix": "postcss --use autoprefixer --autoprefixer.browsers \"last 3 versions\" -r css/*.css",
+    "copy:styles": "make-dir build/css && cpx \"css/*\" build/css",
+    "build:styles": "npm run sass && npm run autoprefix && npm run copy:styles",
+    "~~~~~COPY~~~~~": "~~~~~~~~~~COPY HTML AND IMAGES TO SITE FOLDER~~~~~~~~~~~~",
+    "copy:images": "make-dir build/images && cpx \"images/*\" build/images",
+    "copy:html": "cpx \"index.html\" build",
+    "copy": "npm run copy:images & npm run copy:html",
+    "~~~~~BUILD~~~~~": "~~~~~~~~~~BUILD FOLDER AND WATCH~~~~~~~~~~~~",
+    "del": "rimraf build && make-dir build",
+    "build": "npm run del && npm run build:styles && npm run copy",
+    "start": "node-sass scss/main.scss -wo css/"
+  }
+}
