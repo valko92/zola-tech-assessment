@@ -38,9 +38,8 @@ export default class App extends Component {
         // to prevet .sort() from mutating original array, concatinating it first
         newUsers = [].concat(this.state.users).sort(
           function(a, b){
-            //make name strings equal
-            var nameA = a.name.toUpperCase();
-            var nameB = b.name.toUpperCase();
+            var nameA = a.name.toLowerCase();
+            var nameB = b.name.toLowerCase();
 
             //Lexicographical ordering of strings
             if (nameA < nameB) {
@@ -57,14 +56,11 @@ export default class App extends Component {
 
         break;
       case 'priority':
-      // to prevet .sort() from mutating original array, concatinating it first
         newUsers = [].concat(this.state.users).sort(
           function(a, b){
-            //make name strings equal
             var priorityA = a.priority;
             var priorityB = b.priority;
 
-            //Lexicographical ordering of strings
             if (priorityA < priorityB) {
               return -1;
             }
@@ -72,14 +68,12 @@ export default class App extends Component {
               return 1;
             }
           
-            // else they are equal, don't sort them, leave them in respect to each other 
             return 0;
           }
         ); 
         break;
       default:
         console.log('unknown or empty sort type');
-
         newUsers = usersJson.data;
     }
 
@@ -89,8 +83,6 @@ export default class App extends Component {
   }
 
   onPickFilter(filter) {
-    console.log(filter, usersJson.data, this.state.users)
-
     let newUsers = [];
 
     newUsers = [].concat(usersJson.data).filter((user) => {
@@ -101,6 +93,7 @@ export default class App extends Component {
       }
     });
 
+    //set new filter from new filtered array
     this.setState({
       users: newUsers
     });
@@ -110,9 +103,9 @@ export default class App extends Component {
       <div className="app">
         <Header/>
         <Sort onPickSort={this.onPickSort}/>
-        {/*passing users array to filter to get the categories*/}
+        {/*pass unique categories list to Filter as well as function, so that parent component can get the event */}
         <Filter onPickFilter={this.onPickFilter} cateogires={this.state.uniqueCats} />
-        {/*get user list, pass to Grid component */}
+        {/*get user list via state, pass to Grid component */}
         <Grid users={this.state.users}/>
       </div>
     );
