@@ -1,3 +1,27 @@
-.css {
-    color: blue;    
+html {
+    box-sizing: border-box;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+  
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: 0;
+    outline: none;
+}
+
+@import "_colors.scss";
+@import "_typography.scss";
+@import "_grid.scss";
+@import "_nav.scss";
+@import "_body.scss";

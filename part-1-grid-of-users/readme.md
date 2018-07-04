@@ -24,13 +24,11 @@ $: yarn start or npm start
 To build static files for production:
 
 ```bash
-$: cd part-1-grid-of-users
 $: yarn build or npm run build
 ```
 
 To test with a snapshot test:
 
 ```bash
-$: cd part-1-grid-of-users
 $: yarn test or npm test
 ```

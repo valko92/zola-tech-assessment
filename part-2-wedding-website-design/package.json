@@ -8,6 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^8.6.4",
+    "browser-sync": "^2.24.5",
     "cpx": "^1.5.0",
     "make-dir-cli": "^1.0.0",
     "node-sass": "^4.9.0",
@@ -21,12 +22,13 @@
     "copy:styles": "make-dir build/css && cpx \"css/*\" build/css",
     "build:styles": "npm run sass && npm run autoprefix && npm run copy:styles",
     "~~~~~COPY~~~~~": "~~~~~~~~~~COPY HTML AND IMAGES TO SITE FOLDER~~~~~~~~~~~~",
-    "copy:images": "make-dir build/images && cpx \"images/*\" build/images",
+    "copy:images": "make-dir build/images && cpx \"images/*\" build/images && cpx \"favicon.ico\" build",
     "copy:html": "cpx \"index.html\" build",
     "copy": "npm run copy:images & npm run copy:html",
     "~~~~~BUILD~~~~~": "~~~~~~~~~~BUILD FOLDER AND WATCH~~~~~~~~~~~~",
     "del": "rimraf build && make-dir build",
     "build": "npm run del && npm run build:styles && npm run copy",
-    "start": "node-sass scss/main.scss -wo css/"
+    "watch": "node-sass --watch scss -o css",
+    "dev": "browser-sync start --server . --port 3000 --files '**/*'  --open local"
   }
 }

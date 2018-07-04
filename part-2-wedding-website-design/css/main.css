@@ -1,3 +1,206 @@
-.css{color:blue}
+html {
+  box-sizing: border-box; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLEtBQUssVUFBVSxDQUFDIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNzc3tjb2xvcjpibHVlfVxuIl19 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+*:focus {
+  outline: 0;
+  outline: none; }
+
+.large-title {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+  font-size: 19px;
+  color: #FFFFFF;
+  line-height: 31px;
+  letter-spacing: 4px; }
+  @media (min-width: 1280px) {
+    .large-title {
+      font-size: 70px;
+      line-height: 100px; } }
+
+.header {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+  font-size: 20px;
+  letter-spacing: 0px; }
+  .header.logo {
+    font-size: 15px;
+    line-height: 50px; }
+  @media (min-width: 1280px) {
+    .header.logo, .header {
+      font-size: 42px;
+      line-height: 72px; } }
+
+.subhead {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 16px;
+  letter-spacing: 0px;
+  text-transform: lowercase; }
+
+.body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: 1px; }
+
+.nav-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px; }
+
+* {
+  box-sizing: border-box; }
+
+.grid-container-wrapper {
+  width: calc(100% - 80px);
+  margin: 0 auto; }
+  @media screen and (min-width: 1280px) {
+    .grid-container-wrapper {
+      width: calc(100% - 120px); } }
+
+.grid-container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto; }
+  @media screen and (min-width: 1280px) {
+    .grid-container {
+      max-width: 88%; } }
+
+.row {
+  margin-right: -20px;
+  margin-left: -20px; }
+  @media screen and (min-width: 1280px) {
+    .row {
+      margin-right: -18px;
+      margin-left: -18px; } }
+
+/*-- our cleafix hack -- */
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  width: 50%;
+  /*-- our gutter --*/
+  margin: 0 20px; }
+  @media screen and (min-width: 1280px) {
+    [class*='col-'] {
+      width: 16.66%;
+      /*-- our gutter --*/
+      margin: 0 18px; } }
+
+.col-1 {
+  width: calc(50% - 40px); }
+
+.col-2 {
+  width: calc(100% - 40px); }
+
+.col-3 {
+  width: calc(100% - 40px); }
+
+.col-4 {
+  width: calc(100% - 40px); }
+
+.col-5 {
+  width: calc(100% - 40px); }
+
+.col-6 {
+  width: calc(100% - 40px); }
+
+.push-1-col-s {
+  margin-left: calc(50% + 20px); }
+
+@media screen and (min-width: 1280px) {
+  .col-1, .col-m-1 {
+    width: calc(16.66% - 36px); }
+  .col-2, .col-m-2 {
+    width: calc(33.33% - 36px); }
+  .col-3, .col-m-3 {
+    width: calc(50% - 36px); }
+  .col-4, .col-m-4 {
+    width: calc(66.664% - 36px); }
+  .col-5, .col-m-5 {
+    width: calc(83.33% - 36px); }
+  .col-6, .col-m-6 {
+    width: calc(100% - 36px); }
+  .push-1-col-s {
+    margin-left: 18px; }
+  .push-1-col-m {
+    margin-left: calc(16.66% + 18px); }
+  .push-2-col-m {
+    margin-left: calc(33.33% + 18px); }
+  .push-3-col-m {
+    margin-left: calc(50% + 18px); }
+  .push-4-col-m {
+    margin-left: calc(66.664% + 18px); }
+  .push-5-col-m {
+    margin-left: calc(83.33% + 18px); }
+  .push-6-col-m {
+    margin-left: calc(100% + 18px); } }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  padding: 0 15px;
+  height: 50px;
+  width: 100%; }
+  @media (min-width: 1280px) {
+    nav {
+      padding: 44px 30px;
+      height: 155px; } }
+
+.top {
+  display: none; }
+  @media (min-width: 1280px) {
+    .top {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+      .top .memphis {
+        margin: 0 60px; }
+      .top .hashtag {
+        margin-left: auto; } }
+
+@media (min-width: 1280px) {
+  .logo {
+    margin: 10px;
+    text-align: center; } }
+
+.content {
+  height: 100%;
+  width: 100%;
+  margin-top: 50px; }
+  .content .splash {
+    position: relative; }
+    .content .splash img {
+      width: 100%;
+      height: auto; }
+    .content .splash .large-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  @media (min-width: 1280px) {
+    .content {
+      margin-top: 155px; } }
