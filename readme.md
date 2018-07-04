@@ -10,7 +10,7 @@ Prerequsites:
 Initializing:
 
 ```bash
-$: git clone https://github.com/valko92/zola-tech-assessment
+$: git clone https://github.com/valko92/zola-tech-assessment.git
 ```
 
 To see Part 1:
