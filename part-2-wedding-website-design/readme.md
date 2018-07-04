@@ -4,6 +4,8 @@ Please note, I could not install Sketch onto my Windows computer (I do not have 
 
 I also found some inconsistensies between the Sketch file and the PDF, for instance the Sketch file would not show the header for me, the mobile header seemed inconsistent between the PDF and the Sketch file, and the image was black and white on the PDF and colored on the Sketch file. I am following the PDF for final direction on styling, pertaining to the header and the image color.
 
+The text styles differ a little between the style guide and the actual wireframes as well, in terms of text styles I will use the style guide (i.e. the date is italic)
+
 This is also hosted on: http://val.kozhynov.com/zola/part2/
 
 Made with HTML5 and SCSS.

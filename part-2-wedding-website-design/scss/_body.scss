@@ -28,8 +28,64 @@
 }
 
 .text-content {
-    margin: 40px 0;
+    margin: 30px;
+    .box {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        .titlebox, .para {
+            flex: 1 1 100%;
+        }
+        .divide {
+            width: 212px;
+            height: 2px;
+            background-color: $white;
+            &.desktop {
+                display: none;
+            }
+            &.mobile {
+                display: block;
+                margin: 20px 0;
+            }
+        }
+        .titlebox {
+            margin-bottom: 20px;
+            .leaf {
+                display: none;
+            }
+        }
+        .para {
+            margin-top: 40px
+        }
+    }
     @media (min-width: 1280px) {
-        margin: 100px 0;
+        margin: 40px;
+        .box {
+            .titlebox, .para {
+                flex: 1 1 calc(50% - 2px);
+            }
+            .divide {
+                width: 2px; height: 340px;
+                &.desktop {
+                    display: block;
+                }
+                &.mobile {
+                    display: none;
+                }
+            }
+            .titlebox {
+                margin-bottom: 0;
+                .leaf {
+                    display: block;
+                    margin: 0 auto;
+                    width: 143px; height: 94px;
+                }
+            }
+            .para {
+                padding: 105px;
+                margin: 0;
+            }
+        }
     }
 }
