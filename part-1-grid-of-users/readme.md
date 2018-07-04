@@ -1,5 +1,6 @@
 # Part 1 - Grid of Users
 
+This is also hosted on: http://val.kozhynov.com/zola/part1/
 
 Made with [ReactJS](https://reactjs.org/). This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

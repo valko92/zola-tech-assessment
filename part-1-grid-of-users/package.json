@@ -2,6 +2,7 @@
   "name": "part-1-grid-of-users",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://val.kozhynov.com/zola/part1/",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "enzyme": "^3.3.0",
