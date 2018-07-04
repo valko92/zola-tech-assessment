@@ -97,4 +97,9 @@
             }
         }
     }
+    @media (min-width: 1440px) {
+        .box:first-child {
+            margin-bottom: 160px;
+        }
+    }
 }
