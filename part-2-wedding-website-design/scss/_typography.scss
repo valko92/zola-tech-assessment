@@ -32,7 +32,7 @@
         line-height: 72px;
         font-size: 42px;
         line-height: normal;
-        letter-spacing: normal;
+        letter-spacing: 0;
         text-align: center;
         &.logo {
             font-size: 42px;
@@ -74,4 +74,5 @@
     font-size: 12px;
     line-height: 12px;
     text-align: center;
+    text-transform: uppercase;
 }
