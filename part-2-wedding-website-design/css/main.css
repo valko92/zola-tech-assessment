@@ -22,7 +22,8 @@ html, body {
   font-size: 19px;
   color: #FFFFFF;
   line-height: 31px;
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  text-transform: uppercase; }
   @media (min-width: 1280px) {
     .large-title {
       font-size: 70px;
@@ -39,7 +40,7 @@ html, body {
   @media (min-width: 1280px) {
     .header.logo, .header {
       font-size: 42px;
-      line-height: 72px; } }
+      line-height: normal; } }
 
 .subhead {
   font-family: 'Libre Baskerville', serif;
@@ -163,7 +164,8 @@ nav {
   background-color: #FFFFFF;
   padding: 0 15px;
   height: 50px;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   @media (min-width: 1280px) {
     nav {
       padding: 44px 30px;
@@ -190,17 +192,34 @@ nav {
 .content {
   height: 100%;
   width: 100%;
-  margin-top: 50px; }
+  margin-top: 50px;
+  position: relative;
+  z-index: 5;
+  background-color: #6CB35D; }
   .content .splash {
     position: relative; }
     .content .splash img {
       width: 100%;
-      height: auto; }
+      height: auto;
+      -webkit-filter: grayscale(100%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75); }
     .content .splash .large-title {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%; }
   @media (min-width: 1280px) {
     .content {
       margin-top: 155px; } }
+
+.text-content {
+  margin: 40px 0; }
+  @media (min-width: 1280px) {
+    .text-content {
+      margin: 100px 0; } }
