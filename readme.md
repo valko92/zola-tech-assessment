@@ -11,7 +11,6 @@ Initializing:
 
 ```bash
 $: git clone https://github.com/valko92/zola-tech-assessment
-$: cd part-1-grid-of-users
 ```
 
 To see Part 1:

@@ -1,0 +1,16 @@
+.filter-fieldset {
+    margin: 20px auto 0 auto;
+    width: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-fieldset label {
+    margin: 5px 0;
+}
+
+.filter-fieldset label input {
+    margin: 5px;
+}

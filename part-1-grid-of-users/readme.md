@@ -17,7 +17,6 @@ $: yarn or npm install
 To start in development mode:
 
 ```bash
-$: cd part-1-grid-of-users
 $: yarn start or npm start
 ```
 
